@@ -165,6 +165,23 @@
   .sec-title{ font-size:clamp(26px,3.4vw,38px); font-weight:600; max-width:24ch;}
   .sec-sub{ color:var(--ink-soft); font-size:17px; max-width:60ch; margin-top:14px; line-height:1.6;}
 
+  .gallery{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:38px;
+  }
+  @media (max-width:820px){ .gallery{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .gallery{grid-template-columns:1fr;} }
+  .gallery figure{ margin:0; }
+  .gallery img{
+    width:100%; aspect-ratio:4/3; object-fit:cover;
+    border-radius:16px; border:3px solid #fff;
+    box-shadow:0 12px 22px rgba(28,43,69,.14);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .gallery img:hover{ transform:translateY(-4px) scale(1.015); box-shadow:0 16px 26px rgba(28,43,69,.18); }
+  .gallery figure:nth-child(2n) img{ transform:rotate(-1.4deg); }
+  .gallery figure:nth-child(3n) img{ transform:rotate(1.2deg); }
+  .gallery figure:nth-child(2n):hover img, .gallery figure:nth-child(3n):hover img{ transform:translateY(-4px) rotate(0deg) scale(1.015); }
+
   .pills{ display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:40px; }
   @media (max-width:820px){ .pills{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:520px){ .pills{grid-template-columns:1fr;} }
@@ -339,6 +356,16 @@
   <span class="kicker reveal">Choose your activity</span>
   <h2 class="sec-title reveal">Every kind of learning page, all in one bundle</h2>
   <p class="sec-sub reveal">From first letters to full sentences — pick a category and there's a stack of printables ready to go.</p>
+
+  <div class="gallery reveal">
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/752fd3e5-3934-42b3-972d-a2ceeac1e35f.jpg" alt="Sample printable page from the bundle"></figure>
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/ChatGPT-Image-10-de-jul.-de-2026_-11_51_40.jpg" alt="Sample printable page from the bundle"></figure>
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/ChatGPT-Image-10-de-jul.-de-2026_-11_51_49.jpg" alt="Sample printable page from the bundle"></figure>
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/ChatGPT-Image-10-de-jul.-de-2026_-11_52_10.jpg" alt="Sample printable page from the bundle"></figure>
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/Gemini_Generated_Image_1g4yqd1g4yqd1g4y.png" alt="Sample printable page from the bundle"></figure>
+    <figure><img src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/Gemini_Generated_Image_ua3ietua3ietua3i%20%281%29.png" alt="Sample printable page from the bundle"></figure>
+  </div>
+
   <div class="pills reveal">
     <div class="pill"><span class="ic">🔤</span>Alphabet</div>
     <div class="pill"><span class="ic">🔢</span>Numbers</div>
