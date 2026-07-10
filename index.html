@@ -112,17 +112,27 @@
   .price-note{font-size:14px; color:var(--ink-soft);}
   .price-note b{color:var(--pink);}
 
-  .stack{ position:relative; height:300px; max-width:560px; margin:50px auto 0; }
+  .stack{ position:relative; height:320px; max-width:560px; margin:50px auto 0; }
   .card{
-    position:absolute; width:190px; height:230px;
-    border-radius:16px; padding:18px;
+    position:absolute; width:190px; height:240px;
+    border-radius:16px;
     box-shadow:0 16px 26px rgba(28,43,69,.14);
     font-family:'Fredoka', sans-serif;
     transition:transform .35s ease;
     border:3px solid #fff;
+    overflow:hidden;
   }
-  .card .tag{ font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; opacity:.7;}
-  .card .big{font-size:14.5px; font-weight:600; margin-top:10px; line-height:1.35;}
+  .card img.full{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .card .cap{
+    position:absolute; left:8px; right:8px; bottom:8px;
+    background:rgba(255,255,255,.92);
+    padding:7px 10px; border-radius:9px;
+    font-size:12.5px; font-weight:600; text-align:center;
+    color:var(--ink);
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+  }
   .card.c1{ background:#FFE3EC; color:#9E1A47; top:10px; left:6%; transform:rotate(-9deg); z-index:1;}
   .card.c2{ background:#DFF3F1; color:#0F6B62; top:26px; left:58%; transform:rotate(6deg); z-index:2;}
   .card.c3{ background:#FFF3D6; color:#8A5A00; top:56px; left:32%; transform:rotate(-2deg); z-index:3;}
@@ -144,7 +154,7 @@
   .sticker span.amt{font-size:28px; font-weight:700; line-height:1;}
   @keyframes wobble{ 0%,100%{transform:rotate(10deg);} 50%{transform:rotate(4deg);} }
   @media (prefers-reduced-motion: reduce){ .sticker{animation:none;} }
-  @media (max-width:600px){ .stack{height:260px;} .card{width:150px; height:190px; padding:14px;} }
+  @media (max-width:600px){ .stack{height:280px;} .card{width:150px; height:200px;} }
 
   section{ padding:64px 0; position:relative; }
   .alt{ background:var(--cream); }
@@ -315,9 +325,9 @@
     </div>
 
     <div class="stack reveal in">
-      <div class="card c1"><span class="tag">Alphabet</span><div class="big">Tracing sheets &amp; letter practice, A–Z</div></div>
-      <div class="card c2"><span class="tag">Math</span><div class="big">Counting, addition &amp; number games</div></div>
-      <div class="card c3"><span class="tag">Activities</span><div class="big">Mazes, matching &amp; coloring pages</div></div>
+      <div class="card c1"><img class="full" src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/3-por-4-1.jpg" alt="Alphabet tracing sample page"><span class="cap">Alphabet Tracing</span></div>
+      <div class="card c2"><img class="full" src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/3-por-4-2.jpg" alt="Math worksheet sample page"><span class="cap">Math Worksheets</span></div>
+      <div class="card c3"><img class="full" src="https://raw.githubusercontent.com/fatospelomundo123-pixel/500k_Educational_Bundle/main/images/3%20por%204%203.jpg" alt="Activity sample page"><span class="cap">Fun Activities</span></div>
       <div class="sticker"><span class="small">only</span><span class="amt">$5</span></div>
     </div>
   </div>
