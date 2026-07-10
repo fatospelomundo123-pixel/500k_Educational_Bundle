@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Your Kids Educational Bundle Is Ready!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --cream:#FFFBF1;
+    --ink:#1C2B45;
+    --ink-soft:#5B6B84;
+    --pink:#FF5C8A;
+    --orange:#FF9F45;
+    --yellow:#FFC93C;
+    --green:#3FB681;
+    --teal:#22B8B0;
+    --blue:#3F8EFC;
+    --purple:#9B6DFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{ font-family:'Fredoka', sans-serif; margin:0; color:var(--ink); }
+  .mono{font-family:'Space Mono', monospace;}
+  a{color:inherit;}
+  .wrap{max-width:820px; margin:0 auto; padding:0 24px; position:relative;}
+  .confetti{position:absolute; border-radius:50%; opacity:.55; pointer-events:none;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{ position:relative; padding:70px 0 20px; text-align:center; overflow:hidden; }
+  .rainbow{
+    position:absolute; top:-260px; left:50%; transform:translateX(-50%);
+    width:900px; height:900px; border-radius:50%;
+    background:conic-gradient(from 0deg,
+      transparent 0 50%,
+      var(--pink) 50% 51.5%, var(--orange) 51.5% 53%, var(--yellow) 53% 54.5%,
+      var(--green) 54.5% 56%, var(--teal) 56% 57.5%, var(--blue) 57.5% 59%,
+      transparent 59% 100%);
+    -webkit-mask: radial-gradient(circle, transparent 340px, #000 342px, #000 400px, transparent 402px);
+            mask: radial-gradient(circle, transparent 340px, #000 342px, #000 400px, transparent 402px);
+    z-index:0;
+  }
+  .badge-check{
+    width:84px; height:84px; border-radius:50%; margin:0 auto 22px;
+    background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:42px; box-shadow:0 10px 22px rgba(63,182,129,.35);
+    position:relative; z-index:1;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#FFF1D6; color:#B36B00;
+    font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase;
+    padding:7px 16px; border-radius:999px; margin-bottom:18px;
+    border:1.5px dashed var(--yellow);
+    position:relative; z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(32px, 5.4vw, 50px); line-height:1.08; font-weight:700; position:relative; z-index:1;
+  }
+  .hero h1 .hi{color:var(--pink);}
+  .hero p.sub{
+    font-size:17.5px; line-height:1.6; color:var(--ink-soft); max-width:54ch; margin:18px auto 0;
+    position:relative; z-index:1;
+  }
+
+  section{ padding:36px 0; position:relative; }
+
+  /* ---------- email check card ---------- */
+  .card{
+    background:var(--cream);
+    border:2px solid #F0EEE6;
+    border-radius:22px;
+    padding:34px 36px;
+    margin-top:10px;
+  }
+  .card h3{ font-size:19px; }
+  .steps{ display:flex; flex-direction:column; gap:16px; margin-top:20px; }
+  .step-row{ display:flex; gap:14px; align-items:flex-start; }
+  .step-row .num{
+    flex:0 0 34px; height:34px; width:34px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fredoka',sans-serif; font-weight:700; font-size:15px; color:#fff;
+  }
+  .step-row:nth-child(1) .num{background:var(--pink);}
+  .step-row:nth-child(2) .num{background:var(--teal);}
+  .step-row:nth-child(3) .num{background:var(--purple);}
+  .step-row p{ margin:0; font-size:15.5px; line-height:1.5; color:var(--ink-soft); }
+  .step-row strong{ color:var(--ink); }
+
+  /* ---------- download button ---------- */
+  .download-box{
+    text-align:center;
+    margin-top:40px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--pink); color:#fff;
+    font-family:'Fredoka', sans-serif; font-weight:600; font-size:19px;
+    padding:18px 38px; border-radius:16px;
+    border:none; cursor:pointer;
+    box-shadow:0 6px 0 #C23A66;
+    transition:transform .12s ease, box-shadow .12s ease;
+    text-decoration:none;
+  }
+  .btn:hover{ transform:translateY(2px); box-shadow:0 4px 0 #C23A66; }
+  .btn:active{ transform:translateY(6px); box-shadow:0 0 0 #C23A66; }
+  .btn .ic{ font-size:20px; }
+  .download-note{
+    margin-top:14px; font-size:13.5px; color:var(--ink-soft);
+  }
+
+  /* ---------- support ---------- */
+  .support{
+    margin-top:44px;
+    background:linear-gradient(120deg, var(--purple), var(--blue));
+    color:#fff; border-radius:22px;
+    padding:30px 36px; text-align:center;
+  }
+  .support h3{ color:#fff; font-size:19px; }
+  .support p{ color:#EDE9FF; font-size:15px; margin-top:8px; }
+  .support a.email{
+    display:inline-block; margin-top:14px;
+    background:rgba(255,255,255,.15); border:1.5px dashed rgba(255,255,255,.6);
+    padding:9px 18px; border-radius:999px; font-family:'Space Mono',monospace; font-size:13.5px;
+    text-decoration:none; color:#fff;
+  }
+
+  .stripe{ height:8px; background:linear-gradient(90deg, var(--pink), var(--orange), var(--yellow), var(--green), var(--teal), var(--blue), var(--purple)); margin-top:60px; }
+  footer{ text-align:center; padding:28px 24px 40px; color:var(--ink-soft); font-size:13px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="rainbow"></div>
+  <div class="wrap">
+    <span class="confetti" style="left:8%; top:40px; width:10px; height:10px; background:var(--yellow);"></span>
+    <span class="confetti" style="right:10%; top:60px; width:14px; height:14px; background:var(--teal);"></span>
+    <span class="confetti" style="left:16%; top:170px; width:8px; height:8px; background:var(--pink);"></span>
+    <span class="confetti" style="right:18%; top:190px; width:12px; height:12px; background:var(--purple);"></span>
+
+    <div class="badge-check reveal in">✓</div>
+    <span class="eyebrow reveal in">🎉 Order Confirmed</span>
+    <h1 class="reveal in">Thank you! Your <span class="hi">500,000+ Kids Bundle</span> is ready</h1>
+    <p class="sub reveal in">Your purchase was successful and a confirmation email is on its way to you, with everything you need to access your files.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <section>
+    <div class="card reveal in">
+      <h3>📬 Check your inbox in the next few minutes</h3>
+      <div class="steps">
+        <div class="step-row">
+          <div class="num">1</div>
+          <p><strong>Check your email inbox</strong> for a message with your access details and download link.</p>
+        </div>
+        <div class="step-row">
+          <div class="num">2</div>
+          <p><strong>Look in your spam / junk / promotions folder</strong> if you don't see it within a few minutes — delivery emails sometimes land there.</p>
+        </div>
+        <div class="step-row">
+          <div class="num">3</div>
+          <p><strong>Can't find it at all?</strong> Use the download button below to access your files right now, no need to wait.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="download-box reveal in">
+      <a href="https://mega.nz/folder/lJkFnRAD#iTGQHDEa4lCi-ndvbpphZg" class="btn" target="_blank" rel="noopener">
+        <span class="ic">⬇️</span> Download Your Bundle Now
+      </a>
+      <p class="download-note">Opens your files on Mega · Save them to your device once the folder loads</p>
+    </div>
+
+    <div class="support reveal in">
+      <h3>Need a hand?</h3>
+      <p>If you have any trouble accessing your files, just reach out and we'll sort it out quickly.</p>
+      <a href="mailto:siteofficialbrand@gmail.com" class="email">siteofficialbrand@gmail.com</a>
+    </div>
+  </section>
+</div>
+
+<div class="stripe"></div>
+<footer>Instant digital download · Printable PDF files · No physical product will be shipped</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  items.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
