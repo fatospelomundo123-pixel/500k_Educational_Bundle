@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500,000+ Kids Educational Resources Bundle — PLR + MRR Included</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --cream:#FFFBF1;
+    --ink:#1C2B45;
+    --ink-soft:#5B6B84;
+    --pink:#FF5C8A;
+    --orange:#FF9F45;
+    --yellow:#FFC93C;
+    --green:#3FB681;
+    --teal:#22B8B0;
+    --blue:#3F8EFC;
+    --purple:#9B6DFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fredoka', sans-serif;
+    margin:0;
+    color:var(--ink);
+  }
+  .mono{font-family:'Space Mono', monospace;}
+  a{color:inherit;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 24px; position:relative;}
+  img{max-width:100%; display:block;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+
+  .confetti{position:absolute; border-radius:50%; opacity:.55; pointer-events:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:70px 0 40px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .rainbow{
+    position:absolute; top:-260px; left:50%; transform:translateX(-50%);
+    width:900px; height:900px; border-radius:50%;
+    background:conic-gradient(from 0deg,
+      transparent 0 50%,
+      var(--pink) 50% 51.5%, var(--orange) 51.5% 53%, var(--yellow) 53% 54.5%,
+      var(--green) 54.5% 56%, var(--teal) 56% 57.5%, var(--blue) 57.5% 59%,
+      transparent 59% 100%);
+    -webkit-mask: radial-gradient(circle, transparent 340px, #000 342px, #000 400px, transparent 402px);
+            mask: radial-gradient(circle, transparent 340px, #000 342px, #000 400px, transparent 402px);
+    z-index:0;
+  }
+  .ribbon{
+    position:absolute; top:26px;
+    font-family:'Fredoka', sans-serif; font-weight:600; font-size:13.5px; letter-spacing:.02em;
+    color:#fff; padding:10px 20px; border-radius:10px;
+    box-shadow:0 6px 0 rgba(0,0,0,.12);
+    transform:rotate(-6deg);
+    z-index:2;
+  }
+  .ribbon.left{ left:0px; background:var(--pink); }
+  .ribbon.right{ right:0px; background:var(--teal); transform:rotate(6deg); }
+  @media (max-width:760px){ .ribbon{position:static; display:inline-block; margin:4px 6px; transform:none;} }
+
+  .cloud-wrap{ position:relative; z-index:1; padding-top:10px; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#FFF1D6; color:#B36B00;
+    font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase;
+    padding:7px 16px; border-radius:999px; margin-bottom:20px;
+    border:1.5px dashed var(--yellow);
+  }
+  .hero h1{
+    font-size:clamp(38px, 6.4vw, 68px);
+    line-height:1.02;
+    font-weight:700;
+  }
+  .hero h1 .n1{color:var(--pink);}
+  .hero h1 .n2{color:var(--orange);}
+  .hero p.sub{
+    font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:56ch; margin:20px auto 0;
+  }
+  .hero-cta{ margin-top:30px; display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--pink); color:#fff;
+    font-family:'Fredoka', sans-serif; font-weight:600; font-size:18px;
+    padding:16px 32px; border-radius:14px;
+    border:none; cursor:pointer;
+    box-shadow:0 6px 0 #C23A66;
+    transition:transform .12s ease, box-shadow .12s ease;
+    text-decoration:none;
+  }
+  .btn:hover{ transform:translateY(2px); box-shadow:0 4px 0 #C23A66; }
+  .btn:active{ transform:translateY(6px); box-shadow:0 0 0 #C23A66; }
+  .price-note{font-size:14px; color:var(--ink-soft);}
+  .price-note b{color:var(--pink);}
+
+  .stack{ position:relative; height:300px; max-width:560px; margin:50px auto 0; }
+  .card{
+    position:absolute; width:190px; height:230px;
+    border-radius:16px; padding:18px;
+    box-shadow:0 16px 26px rgba(28,43,69,.14);
+    font-family:'Fredoka', sans-serif;
+    transition:transform .35s ease;
+    border:3px solid #fff;
+  }
+  .card .tag{ font-family:'Space Mono', monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; opacity:.7;}
+  .card .big{font-size:14.5px; font-weight:600; margin-top:10px; line-height:1.35;}
+  .card.c1{ background:#FFE3EC; color:#9E1A47; top:10px; left:6%; transform:rotate(-9deg); z-index:1;}
+  .card.c2{ background:#DFF3F1; color:#0F6B62; top:26px; left:58%; transform:rotate(6deg); z-index:2;}
+  .card.c3{ background:#FFF3D6; color:#8A5A00; top:56px; left:32%; transform:rotate(-2deg); z-index:3;}
+  .stack:hover .c1{ transform:rotate(-14deg) translateY(-6px);}
+  .stack:hover .c2{ transform:rotate(10deg) translateY(-6px);}
+  .stack:hover .c3{ transform:rotate(2deg) translateY(-10px);}
+  .sticker{
+    position:absolute; right:6%; bottom:-10px; z-index:4;
+    width:98px; height:98px; border-radius:50%;
+    background:var(--purple); color:#fff;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    transform:rotate(10deg);
+    border:3px dashed #fff;
+    font-family:'Fredoka', sans-serif;
+    box-shadow:0 10px 20px rgba(155,109,255,.35);
+    animation:wobble 5s ease-in-out infinite;
+  }
+  .sticker span.small{font-size:9.5px; font-family:'Space Mono',monospace; letter-spacing:.08em;}
+  .sticker span.amt{font-size:28px; font-weight:700; line-height:1;}
+  @keyframes wobble{ 0%,100%{transform:rotate(10deg);} 50%{transform:rotate(4deg);} }
+  @media (prefers-reduced-motion: reduce){ .sticker{animation:none;} }
+  @media (max-width:600px){ .stack{height:260px;} .card{width:150px; height:190px; padding:14px;} }
+
+  section{ padding:64px 0; position:relative; }
+  .alt{ background:var(--cream); }
+  .kicker{
+    font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--pink); margin-bottom:10px; display:block;
+  }
+  .sec-title{ font-size:clamp(26px,3.4vw,38px); font-weight:600; max-width:24ch;}
+  .sec-sub{ color:var(--ink-soft); font-size:17px; max-width:60ch; margin-top:14px; line-height:1.6;}
+
+  .pills{ display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:40px; }
+  @media (max-width:820px){ .pills{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .pills{grid-template-columns:1fr;} }
+  .pill{
+    display:flex; align-items:center; gap:12px;
+    background:#fff; border:2px solid #F0EEE6; border-radius:999px;
+    padding:12px 20px;
+    font-family:'Fredoka', sans-serif; font-weight:600; font-size:15.5px;
+    box-shadow:0 3px 0 #F0EEE6;
+  }
+  .pill .ic{
+    width:36px; height:36px; border-radius:50%; flex:0 0 36px;
+    display:flex; align-items:center; justify-content:center; font-size:17px; color:#fff;
+  }
+  .pill:nth-child(11n+1) .ic{background:var(--pink);}
+  .pill:nth-child(11n+2) .ic{background:var(--orange);}
+  .pill:nth-child(11n+3) .ic{background:var(--yellow); color:#8A5A00;}
+  .pill:nth-child(11n+4) .ic{background:var(--green);}
+  .pill:nth-child(11n+5) .ic{background:var(--teal);}
+  .pill:nth-child(11n+6) .ic{background:var(--blue);}
+  .pill:nth-child(11n+7) .ic{background:var(--purple);}
+  .pill:nth-child(11n+8) .ic{background:var(--pink);}
+  .pill:nth-child(11n+9) .ic{background:var(--orange);}
+  .pill:nth-child(11n+10) .ic{background:var(--teal);}
+  .pill:nth-child(11n+11) .ic{background:var(--purple);}
+
+  .list-card{
+    background:#fff;
+    border-radius:22px;
+    padding:44px;
+    margin-top:44px;
+    border:2px solid #F0EEE6;
+    box-shadow:0 10px 0 #F5F2E8;
+  }
+  .checklist{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px 40px; margin-top:14px;
+    list-style:none; padding:0;
+  }
+  @media (max-width:700px){ .checklist{grid-template-columns:1fr;} }
+  .checklist li{ display:flex; gap:10px; align-items:flex-start; font-size:15.5px; line-height:1.4; }
+  .checklist li::before{
+    content:"✓"; flex:0 0 22px; height:22px; width:22px; border-radius:7px;
+    background:var(--green); color:#fff; font-size:13px; font-weight:700;
+    display:flex; align-items:center; justify-content:center; margin-top:1px;
+  }
+
+  .bonus{
+    margin-top:44px;
+    background:linear-gradient(120deg, var(--purple), var(--blue));
+    color:#fff;
+    border-radius:22px;
+    padding:38px 44px;
+    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+  }
+  .bonus .tag-badge{
+    font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+    background:var(--yellow); color:#4A3400; padding:5px 12px; border-radius:999px; display:inline-block; margin-bottom:10px;
+  }
+  .bonus h3{color:#fff; font-size:22px; max-width:30ch;}
+  .bonus p{color:#EDE9FF; margin-top:8px; max-width:42ch; font-size:15px;}
+
+  .slip{
+    margin-top:44px;
+    background:#fff;
+    border:2.5px dashed var(--teal);
+    border-radius:20px;
+    padding:40px;
+    position:relative;
+  }
+  .slip::after{
+    content:"APPROVED";
+    position:absolute; top:26px; right:34px;
+    font-family:'Space Mono', monospace; font-weight:700; font-size:13px; letter-spacing:.08em;
+    color:var(--green); border:2px solid var(--green); padding:6px 12px; border-radius:8px;
+    transform:rotate(8deg); opacity:.85;
+  }
+  .slip-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px 30px; margin-top:20px;}
+  @media (max-width:700px){ .slip-grid{grid-template-columns:1fr;} .slip::after{display:none;} }
+  .slip-grid li{ list-style:none; font-size:15px; display:flex; gap:8px;}
+  .slip-grid li::before{content:"✔"; color:var(--green); font-weight:700;}
+
+  .who{ display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:40px; text-align:center; }
+  @media (max-width:900px){ .who{grid-template-columns:repeat(2,1fr);} }
+  .who .badge{
+    width:64px; height:64px; border-radius:50%; margin:0 auto;
+    display:flex; align-items:center; justify-content:center; font-size:28px; color:#fff;
+  }
+  .who div:nth-child(1) .badge{background:var(--pink);}
+  .who div:nth-child(2) .badge{background:var(--orange);}
+  .who div:nth-child(3) .badge{background:var(--teal);}
+  .who div:nth-child(4) .badge{background:var(--purple);}
+  .who div:nth-child(5) .badge{background:var(--blue);}
+  .who p{font-family:'Fredoka',sans-serif; font-weight:600; font-size:15px; margin-top:10px; color:var(--ink);}
+
+  .steps{ display:flex; gap:0; margin-top:44px; }
+  @media (max-width:800px){ .steps{flex-direction:column;} }
+  .step{ flex:1; padding:24px; }
+  .step .num{
+    width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-family:'Fredoka',sans-serif; font-size:19px; font-weight:700; color:#fff;
+  }
+  .step:nth-child(1) .num{background:var(--pink);}
+  .step:nth-child(2) .num{background:var(--teal);}
+  .step:nth-child(3) .num{background:var(--purple);}
+  .step h4{font-family:'Fredoka',sans-serif; font-size:17px; margin-top:12px; color:var(--ink);}
+  .step p{font-size:14.5px; color:var(--ink-soft); margin-top:6px;}
+
+  .faq{ margin-top:36px; }
+  details{
+    background:#fff; border-radius:14px; padding:18px 22px; margin-bottom:12px;
+    border:2px solid #F0EEE6;
+  }
+  summary{
+    cursor:pointer; font-family:'Fredoka',sans-serif; font-weight:600; font-size:16px; color:var(--ink);
+    list-style:none; display:flex; justify-content:space-between; align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{ content:"+"; font-size:22px; color:var(--pink); }
+  details[open] summary::after{ content:"–"; }
+  details p{ margin-top:12px; color:var(--ink-soft); font-size:15px; line-height:1.6; }
+
+  .final{
+    background:linear-gradient(120deg, var(--pink), var(--orange));
+    color:#fff; border-radius:26px;
+    padding:56px 40px; text-align:center; margin-top:10px;
+    position:relative; overflow:hidden;
+  }
+  .final h2{ color:#fff; font-size:clamp(26px,4vw,36px); }
+  .final p{ color:#FFE9E0; margin-top:12px; font-size:16px; }
+  .final .price-row{ display:flex; align-items:baseline; justify-content:center; gap:8px; margin:26px 0 8px; }
+  .final .price-row .new{ font-family:'Fredoka',sans-serif; font-weight:700; font-size:54px; color:#fff;
+    text-shadow:0 4px 0 rgba(0,0,0,.08);}
+  .final .btn{ margin-top:10px; background:#fff; color:var(--pink); box-shadow:0 6px 0 #E0D9CF; }
+  .final .btn:hover{ box-shadow:0 4px 0 #E0D9CF; }
+
+  footer{ text-align:center; padding:32px 24px 40px; color:var(--ink-soft); font-size:13px; }
+  .stripe{ height:8px; background:linear-gradient(90deg, var(--pink), var(--orange), var(--yellow), var(--green), var(--teal), var(--blue), var(--purple)); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="rainbow"></div>
+  <div class="ribbon left">🎉 MEGA BUNDLE</div>
+  <div class="ribbon right">🎁 MRR + PLR INCLUDED</div>
+  <div class="wrap cloud-wrap">
+    <span class="confetti" style="left:6%; top:60px; width:10px; height:10px; background:var(--yellow);"></span>
+    <span class="confetti" style="right:8%; top:90px; width:14px; height:14px; background:var(--teal);"></span>
+    <span class="confetti" style="left:14%; top:220px; width:8px; height:8px; background:var(--pink);"></span>
+    <span class="confetti" style="right:16%; top:250px; width:12px; height:12px; background:var(--purple);"></span>
+
+    <span class="eyebrow reveal in">⭐ Instant Digital Download</span>
+    <h1 class="reveal in"><span class="n1">500,000+</span> <span class="n2">PAGES</span><br>Kids Educational Bundle</h1>
+    <p class="sub reveal in">Worksheets, coloring pages, tracing sheets, mazes, flashcards, busy books and more — one giant printable library for parents, teachers, homeschoolers and Etsy sellers. Full PLR + MRR rights included.</p>
+    <div class="hero-cta reveal in">
+      <a href="#buy" class="btn">Get the Bundle — $5</a>
+      <span class="price-note">One-time payment · <b>Instant access</b></span>
+    </div>
+
+    <div class="stack reveal in">
+      <div class="card c1"><span class="tag">Alphabet</span><div class="big">Tracing sheets &amp; letter practice, A–Z</div></div>
+      <div class="card c2"><span class="tag">Math</span><div class="big">Counting, addition &amp; number games</div></div>
+      <div class="card c3"><span class="tag">Activities</span><div class="big">Mazes, matching &amp; coloring pages</div></div>
+      <div class="sticker"><span class="small">only</span><span class="amt">$5</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="stripe"></div>
+
+<section class="wrap">
+  <span class="kicker reveal">Choose your activity</span>
+  <h2 class="sec-title reveal">Every kind of learning page, all in one bundle</h2>
+  <p class="sec-sub reveal">From first letters to full sentences — pick a category and there's a stack of printables ready to go.</p>
+  <div class="pills reveal">
+    <div class="pill"><span class="ic">🔤</span>Alphabet</div>
+    <div class="pill"><span class="ic">🔢</span>Numbers</div>
+    <div class="pill"><span class="ic">✏️</span>Tracing</div>
+    <div class="pill"><span class="ic">🔺</span>Shapes</div>
+    <div class="pill"><span class="ic">🖍️</span>Coloring</div>
+    <div class="pill"><span class="ic">📖</span>Reading</div>
+    <div class="pill"><span class="ic">⭐</span>Sight Words</div>
+    <div class="pill"><span class="ic">📅</span>Events &amp; Holidays</div>
+    <div class="pill"><span class="ic">🗂️</span>Flashcards</div>
+    <div class="pill"><span class="ic">🏠</span>Pretend Play</div>
+    <div class="pill"><span class="ic">🧩</span>Activities &amp; Games</div>
+  </div>
+
+  <div class="list-card reveal">
+    <h3 style="font-size:22px;">Everything included</h3>
+    <ul class="checklist">
+      <li>Printable worksheets</li>
+      <li>Alphabet &amp; letter practice</li>
+      <li>Number tracing activities</li>
+      <li>Preschool learning pages</li>
+      <li>Mazes &amp; puzzle games</li>
+      <li>Vocabulary &amp; word search activities</li>
+      <li>Reading &amp; literacy worksheets</li>
+      <li>Busy books for kids</li>
+      <li>Flashcards bundle</li>
+      <li>Shapes, colors &amp; matching activities</li>
+      <li>Weather &amp; seasons learning</li>
+      <li>Coloring books &amp; printable pages</li>
+      <li>Pretend play activities</li>
+      <li>Chore charts &amp; responsibility sheets</li>
+      <li>Event &amp; holiday learning activities</li>
+      <li>Do-a-dot activities</li>
+      <li>Printable learning games</li>
+      <li>...and much more</li>
+    </ul>
+  </div>
+
+  <div class="bonus reveal">
+    <div>
+      <span class="tag-badge">Bonus</span>
+      <h3>6 Editable Canva Templates</h3>
+      <p>Ready-made templates so you can rebrand covers, product mockups and listing graphics in minutes — no design skills needed.</p>
+    </div>
+    <div style="font-size:56px;">🎨</div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="kicker reveal">License</span>
+    <h2 class="sec-title reveal">PLR + MRR — use it your way</h2>
+    <p class="sec-sub reveal">This isn't just a printable pack for your own family or classroom. It comes with commercial rights, so it can also become the foundation of your own shop.</p>
+    <div class="slip reveal">
+      <h3 style="font-size:19px;">License terms</h3>
+      <ul class="slip-grid">
+        <li>Rebrand &amp; resell allowed</li>
+        <li>Commercial use rights</li>
+        <li>Bundle with your own products</li>
+        <li>Perfect for Etsy sellers &amp; digital shops</li>
+        <li>Use for classroom or home printing</li>
+        <li>Build a passive-income product line</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <span class="kicker reveal">Perfect for</span>
+  <h2 class="sec-title reveal">Built for anyone who teaches, prints, or sells</h2>
+  <div class="who reveal">
+    <div><span class="badge">👩‍🏫</span><p>Teachers</p></div>
+    <div><span class="badge">🏡</span><p>Homeschool families</p></div>
+    <div><span class="badge">👨‍👩‍👧</span><p>Parents</p></div>
+    <div><span class="badge">🧸</span><p>Preschool &amp; kindergarten</p></div>
+    <div><span class="badge">💻</span><p>Etsy &amp; digital sellers</p></div>
+  </div>
+
+  <div class="steps reveal">
+    <div class="step">
+      <div class="num">1</div>
+      <h4>Complete your purchase</h4>
+      <p>Secure checkout, takes under a minute.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h4>Get your download link</h4>
+      <p>Delivered instantly to your email — no waiting.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h4>Print, teach, or resell</h4>
+      <p>Everything is ready to use the moment you open it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="kicker reveal">Questions</span>
+    <h2 class="sec-title reveal">Good to know</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>What format are the files in?</summary>
+        <p>Everything is delivered as printable PDF files, organized by category, ready to print at home, at school, or on a professional printer.</p>
+      </details>
+      <details>
+        <summary>Is this a physical product?</summary>
+        <p>No — this is a 100% digital download. Nothing will be shipped. You'll get instant access to your files after purchase.</p>
+      </details>
+      <details>
+        <summary>Can I sell these printables in my own shop?</summary>
+        <p>Yes. The bundle includes PLR + MRR rights, meaning you can rebrand, bundle, and resell the content commercially.</p>
+      </details>
+      <details>
+        <summary>Do I need Canva to use this?</summary>
+        <p>No. Canva is only needed if you want to edit the 6 bonus templates — every worksheet and printable works as-is.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="buy">
+  <div class="final reveal">
+    <h2>500,000+ pages. One download. $5.</h2>
+    <p>Everything above, delivered instantly, with full commercial rights included.</p>
+    <div class="price-row">
+      <span class="new">$5</span>
+    </div>
+    <a href="#" class="btn">Get Instant Access</a>
+  </div>
+</section>
+
+<footer>
+  Instant digital download · Printable PDF files · No physical product will be shipped
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15});
+  items.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
